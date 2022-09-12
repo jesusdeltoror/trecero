@@ -15,18 +15,35 @@
     <h1 id= "titulo Cuento" >Pactica_Grupal :)</h1>
 
     <!-- inputs de entrada de datos -->
-    <input type="text" id="id_a" class= "input" placeholder="nombre_1:">
-    <input type="text" id="id_b" class= "input" placeholder="nombre_2:">
 
-     <!-- contenido divs -->
-    <div id="datos" class ="Contenedor"> Cuento: <div id = "inputs"></div> </div>
+    <!-- EDICION: Dante - Agregue dos labels, uno para cada input y los encerre a los dos en un div diferente, -->
+    <!-- en caso de ser necesarios para edicion por css añadirles uno o las clases necesarias. -->
+    <div>
+        <label for="nombre1">Nombre 1:</label>
+        <input type="text" id="id_a" class= "input">
+    </div>
+
+    <div>
+        <label for="nombre2">Nombre 2</label>
+        <input type="text" id="id_b" class= "input">
+    </div>
+
+    <!-- contenido divs -->
+
+    <!-- EDICION: Dante - Puse el string "Cuento" en un h2 y cambie un poco la estructura. -->
+    <div id="datos" class ="contenedor cuento"> 
+        <h2>Cuento:</h2>
+        <div>
+            <p id="p_cuento"></p>
+        </div> 
+    </div>
     
      <!-- Boton de guardado -->
     <button id="button" class = "generador" >Generar Cuento</button>
 
     
      <!-- Conexion al js-->
-    <script src="./01_index.js" type = "module"></script>
+    <script src="./index.js" type = "module"></script>
 
 
 <body>
