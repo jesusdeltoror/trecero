@@ -55,8 +55,8 @@ h1{
     
 }
 
+/* Quite la linea de height para que la altura del cuento se adapte automaticamente. */
 .cont_cuento {
-    height: 100px;
     background-color: #ECECEC;
     border-radius: 10px;
 }

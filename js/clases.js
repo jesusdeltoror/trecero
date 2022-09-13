@@ -10,6 +10,7 @@ class GeneradorDeCuentos{
             Un día el primer cerdito vio que se acercaba el lobo y entró corriendo en su casa de paja. El lobo sopló, la derribó y el cerdito se fue corriendo a la casa de madera, donde vivía su amigo.<br>\n\
             El lobo fue hasta la casa de madera, pero esta vez sopló más fuerte y también la derribó. Los dos cerditos salieron corriendo a la casa de ladrillos de su otro amigo.<br>\n\
             El lobo también fue hasta la puerta de esta casa, pero cuando sopló, no la pudo derribar. Los tres cerditos estaban muy contentos."
+            
         },
 
         this.cuento2 = {
