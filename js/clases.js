@@ -1,6 +1,7 @@
 class GeneradorDeCuentos{
     // El constructor parte con 3 atributos que contienen un diccionario cada uno donde el primer valor hace referencia al primer nombre a cambiar, el segundo
     // al segundo nombre que se va a cambiar y el tercero es el cuento es cuestion, el ultimo atributo es un arreglo que contiene los 3 primeros atributos.
+
     constructor(){
         this.cuento1 = {
             "nombre1": "nombre1",
@@ -26,7 +27,7 @@ class GeneradorDeCuentos{
             Esta vez, los aldeanos no le creyeron. Entonces, el lobo atacó a algunas de sus ovejas y Pedro salió corriendo. Desde ese día, Pedro no volvió a decir mentiras."
         },
 
-        this.cuentos = [this.cuento1, this.cuento2, this.cuento3]
+        this.cuentos = [this.cuento1, this.cuento2, this.cuento3];
     }
 
     // Genera el diccionario de un cuento para que luego se pueda editar, los primeros dos parametros que pide son los strings del primer nombre y segundo nombre 
@@ -47,20 +48,25 @@ class GeneradorDeCuentos{
     // Escoge un cuento aleatorio de los cuentos disponibles dentro del arreglo this.cuentos (retorna el diccionario con el cuento).
     seleccionarCuento(){
         let random_number = Math.floor(Math.random() * this.cuentos.length);
+        console.log(random_number);
+        console.log(this.cuentos[random_number]);
         return this.cuentos[random_number]; 
+        
     }
 }
 
 class EditorDeCuentos{
     constructor(){
         this.nombre1 = null,
-        this.nombre2 = null 
+        this.nombre2 = null, 
+        this.final = null
     }
 
     // Cambia los dos atributos de la clase por los dos nombres que se van a utilizar.
     editarNombres(input1, input2){
         this.nombre1 = input1;
         this.nombre2 = input2;
+        
     }
 
     // Usa un diccionario que contenga un cuento y los nombres a cambiar y edita el cuento cambiando los nombres a cambiar por los atributos de this.nombre1 y this.nombre2.
@@ -71,9 +77,11 @@ class EditorDeCuentos{
 
         let primer_cambio = cuento_selec.replace(RegExp(nombre1, "g"), this.nombre1);
         let segundo_cambio = primer_cambio.replace(RegExp(nombre2, "g"), this.nombre2);
+            this.final=  segundo_cambio;
 
-        return segundo_cambio
+            return this.final;
     }
+
 }
 
 export {GeneradorDeCuentos, EditorDeCuentos};
